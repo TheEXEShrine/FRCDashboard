@@ -165,3 +165,4 @@ app.on('activate', function () {
     // dock icon is clicked and there are no other windows open.
     if (mainWindow == null) createWindow();
 });
+document.documentElement.style.setProperty('--accent', '#2980b9'); // blue alliance

@@ -113,3 +113,15 @@ addEventListener('error', (ev) => {
 		lineNumber: ev.lineno
 	});
 });
+// listener test no promises
+
+NetworkTables.addKeyListener("/SmartDashboard/Has Coral/", (key, value) => {
+    const box = document.getElementById("shooter-status");
+
+    if (value === true) {
+        shooterStatus.style.backgroundColor = 'green';
+        shooterStatus.textContent = 'Coral In fully';
+    } else {
+        shooterStatus.style.backgroundColor = 'red';
+        shooterStatus.textContent = 'Coral Not In';
+    }});
